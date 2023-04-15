@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Start general block tags styling */
+
+header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px 5px 20px;
+    transition: all 300ms;
+    color: white;
+    z-index: 1;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+body section:not(section:first-of-type)
+{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End general block tags styling */
+
+/* Start general elements styling */
+
+a
+{
+    text-decoration: none;
+}
+
+button
+{
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+}
+
+ul
+{
+    list-style: none;
+}
+
+hr
+{
+    width: 15%;
+    height: 5px;
+    background-color: #FF3C38;
+    border: none;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+textarea
+{
+    resize: none;
+}
+
+/* End general elements styling */
+
+/* Header */
+
+#btn-menu
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#btn-menu span
+{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+
+#nav-menu-header
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    transition: all 300ms;
+}
+
+#nav-menu-header a
+{
+    display: inline-block;
+    color: white;
+    padding: 20px 450px 20px 0;
+}
+
+#nav-menu-header a:hover
+{
+    color: #FF3C38;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+#nav-menu-header ul
+{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+/* / Header */
+
+/* Sections */
+
+.div-section-head
+{
+    text-align: center;
+}
+
+.div-section-head h6
+{
+    font-style: italic;
+}
+
+#div-signup-window
+{
+    position: fixed;
+    z-index: 1;
+    top: 15%;
+    left: 50px;
+    right: 50px;
+    background-color: #eee;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+#btn-close-signup
+{
+    border: none;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#div-signup-window > div
+{
+    padding: 80px;
+}
+
+#div-signup-window .flex-column div button
+{
+    display: inline-block;
+}
+
+#section-home
+{
+    background-image: url(../assets/images/tennis-251907_1920.jpg);
+    color: white;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#section-home button
+{
+    margin-top: 50px
+}
+
+#section-home .div-section-content > button
+{
+    background-color: #FF3C38;
+    border: 2px solid #FF3C38;
+    color: inherit;
+    margin-right: 20px;
+}
+
+#section-home a button
+{
+    border: 2px solid #FFF275;
+    background-color: transparent;
+    color: #FFF275;
+    margin-left: 20px;
+}
+
+#section-about .div-section-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 10px;
+}
+
+#carousel-about-section
+{
+    width: 400px;
+    height: 270px;
+    z-index: 0;
+}
+
+#carousel-about-section img
+{
+    border-radius: 20px;
+}
+
+#carousel-about-section button
+{
+    z-index: 0 !important;
+}
+
+.carousel-control-prev, .carousel-control-next
+{
+    margin-top: 25%;
+}
+
+/* / Sections */
+
+/* Script styling */
+
+/* Menu button */
+
+.animated-bar1
+{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.animated-bar2
+{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.animated-bar3
+{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/* / Menu button */
+
+.set-hidden
+{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-modal
+{
+    overflow: hidden;
+}
+
+.obfuscate
+{
+    background-color: black;
+    opacity: .8;
+}
+
+/* / Script styling */
