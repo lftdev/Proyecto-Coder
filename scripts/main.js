@@ -1,6 +1,6 @@
-const nav_menu_header = document.getElementById("nav-menu-header")
+const nav_menu_header = document.querySelector("#nav-menu-header")
 
-const btn_menu = document.querySelector("#btn-menu")
+const btn_menu = document.querySelector(".btn-menu")
 btn_menu.addEventListener("click", on_click_menu)
 
 const signup_window = document.querySelector("#div-signup-window")
@@ -13,7 +13,7 @@ btn_signup.addEventListener("click", on_click_btn_signup)
 
 window.addEventListener("scroll", () =>
 {
-    obfuscate_header(window.scrollY)
+    sw_color_on_scroll(window.scrollY)
 });
 
 function on_click_menu()
@@ -26,13 +26,15 @@ function on_click_menu()
 function on_click_btn_signup()
 {
     signup_window.classList.toggle("set-hidden")
-    document.querySelector("html").classList.toggle("show-modal")
+    document.querySelector("html").classList.toggle("on-modal-show")
 }
 
-function obfuscate_header(scrollY)
+function sw_color_on_scroll(scrollY)
 {
-    if (scrollY >= 300)
-        document.querySelector("header").classList.add("obfuscate")
+    if (scrollY >= window.innerHeight)
+        document.querySelector("header").classList.add("sw-color-on-scroll")
     else
-        document.querySelector("header").classList.remove("obfuscate")
+        document.querySelector("header").classList.remove("sw-color-on-scroll")
 }
+
+/* alert(window.innerWidth) */

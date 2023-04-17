@@ -1,42 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* Start general block tags styling */
 
-header
-{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 20px 5px 20px;
-    transition: all 300ms;
-    color: white;
-    z-index: 1;
-}
-
-body
-{
-    font-family: 'Roboto', sans-serif;
-}
-
-body section:not(section:first-of-type)
-{
-    margin: 20px 0;
-    padding: 0 20px;
-}
-
-.flex-column
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* End general block tags styling */
-
-/* Start general elements styling */
-
+/* General items styling */
 a
 {
     text-decoration: none;
@@ -73,19 +37,44 @@ textarea
 {
     resize: none;
 }
+/* /General items styling */
 
-/* End general elements styling */
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Header */
 
-#btn-menu
+header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    transition: all 300ms;
+    color: white;
+    z-index: 1;
+}
+
+header > a
+{
+    color: white;
+}
+
+.btn-menu
 {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
 
-#btn-menu span
+.btn-menu span
 {
     display: block;
     width: 100%;
@@ -96,50 +85,47 @@ textarea
     transition: all 300ms;
 }
 
-#nav-menu-header
+header nav
 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 10px;
     right: 10px;
     transition: all 300ms;
 }
 
-#nav-menu-header a
+header nav ul.flex-container
 {
-    display: inline-block;
-    color: white;
-    padding: 20px 450px 20px 0;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
 }
 
-#nav-menu-header a:hover
+header nav ul.flex-container a
+{
+    display: block;
+    color: white;
+    padding: 20px 20px 20px 100vh;
+}
+
+header nav ul.flex-container a:hover
 {
     color: #FF3C38;
     font-weight: bold;
     transition: all 500ms;
 }
 
-#nav-menu-header ul
+/* /Header */
+body
 {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+    font-family: "Roboto";
 }
 
-/* / Header */
-
-/* Sections */
-
-.div-section-head
+body section:not(section:first-of-type)
 {
-    text-align: center;
-}
-
-.div-section-head h6
-{
-    font-style: italic;
+    margin: 20px;
 }
 
 #div-signup-window
@@ -156,6 +142,34 @@ textarea
     transition: all 300ms;
 }
 
+#div-signup-window > div
+{
+    padding: 80px;
+}
+
+#div-signup-window .flex-column div button
+{
+    border: none;
+}
+
+#div-signup-window .flex-column div span
+{
+    height: 5px;
+    background-color: black;
+}
+
+/* Body sections styling */
+
+.div-section-head
+{
+    text-align: center;
+}
+
+.div-section-head h6
+{
+    font-style: italic;
+}
+
 #btn-close-signup
 {
     border: none;
@@ -167,24 +181,18 @@ textarea
     right: 10px;
 }
 
-#div-signup-window > div
-{
-    padding: 80px;
-}
-
-#div-signup-window .flex-column div button
-{
-    display: inline-block;
-}
-
 #section-home
 {
-    background-image: url(../assets/images/tennis-251907_1920.jpg);
-    color: white;
-    height: 300px;
+    background: url(../assets/images/basketball-6763978_1920.jpg) no-repeat center center fixed;
+    min-height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
+    color: white;
     text-align: center;
+}
+
+#section-home h1
+{
+    font-size: 4rem;
 }
 
 #section-home button
@@ -208,31 +216,27 @@ textarea
     margin-left: 20px;
 }
 
-#section-about .div-section-content
+.carousel
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    gap: 10px;
-}
-
-#carousel-about-section
-{
-    width: 400px;
-    height: 270px;
     z-index: 0;
 }
 
-#carousel-about-section img
+img.d-block
 {
+    object-fit: cover;
     border-radius: 20px;
 }
 
-#carousel-about-section button
+.carousel-caption
 {
-    z-index: 0 !important;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.carousel-caption p
+{
+    text-align: justify;
 }
 
 .carousel-control-prev, .carousel-control-next
@@ -240,7 +244,12 @@ textarea
     margin-top: 25%;
 }
 
-/* / Sections */
+#section-gallery .container .row img
+{
+    object-fit: cover;
+}
+
+/* /Body sections styling */
 
 /* Script styling */
 
@@ -270,15 +279,82 @@ textarea
     visibility: hidden;
 }
 
-.show-modal
+.on-modal-show
 {
     overflow: hidden;
 }
 
-.obfuscate
+.sw-color-on-scroll .btn-menu span
 {
-    background-color: black;
-    opacity: .8;
+    background-color: #FF3C38;
 }
 
-/* / Script styling */
+.sw-color-on-scroll a
+{
+    color: #FF3C38;
+}
+
+.sw-color-on-scroll a:hover
+{
+    color: #FFF275;
+}
+
+/* /Script styling */
+
+@media (min-width: 1282px)
+{
+    div.flex-container
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #carousel-about-section
+    {
+        width: 1200px;
+        height: auto;
+        z-index: 0;
+    }
+
+    #div-signup-window
+    {
+        top: 15%;
+        left: 35%;
+        width: 30%;
+        text-align: center;
+    }
+
+    #section-home
+    {
+        background-image: url(../assets/images/football-1274661_1920.jpg);
+    }
+
+    header nav
+    {
+        top: 0px;
+    }
+    
+    header nav ul.flex-container
+    {
+        flex-direction: row;
+        background-color: transparent;
+        gap: 50px;
+    }
+
+    header nav ul.flex-container a
+    {
+        padding: 0;
+    }
+    
+    .on-screen-change-show
+    {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+    }
+
+    .on-screen-change-hide
+    {
+        display: none;
+    }
+}
