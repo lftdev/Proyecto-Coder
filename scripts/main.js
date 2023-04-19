@@ -32,9 +32,8 @@ function on_click_btn_signup()
 function sw_color_on_scroll(scrollY)
 {
     if (scrollY >= window.innerHeight)
-        document.querySelector("header").classList.add("sw-color-on-scroll")
+        alert("scroll")
+        /* document.querySelector("header").classList.add("sw-color-on-scroll") */
     else
         document.querySelector("header").classList.remove("sw-color-on-scroll")
 }
-
-/* alert(window.innerWidth) */

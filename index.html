@@ -15,7 +15,7 @@
     <title>Sports club</title>
   </head>
   <body>
-    <header>
+    <header class="flex-container">
       <a href="index.html"><h1>LOGO</h1></a>
       <div class="btn-menu on-screen-change-hide">
         <span class="btn-menu-bar1"></span>
@@ -39,33 +39,6 @@
         </ul>
       </nav>
     </header>
-    <!-- Modal Sign Up window -->
-    <div id="div-signup-window" class="set-hidden">
-      <button id="btn-close-signup">
-        <img src="assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
-      </button>
-      <div class="flex-container">
-        <h1>Join us now!</h1>
-        <div>
-          <button>Sign up</button>
-          <button>Log in</button>
-          <span></span>
-        </div>
-        <form id="form-signup" class="flex-container">
-          <input id="uname-signup" placeholder="Your username" type="text" />
-          <input id="name-signup" placeholder="Your name" type="text" />
-          <input id="surname-signup" placeholder="Your surname" type="text" />
-          <input id="email-signup" placeholder="Your email" type="email" />
-          <input id="pass-signup" placeholder="Your password" type="password" />
-          <p>
-            By signing up, you agree to our
-            <a href="#"> terms and conditions</a>.
-          </p>
-          <input type="submit" value="Sign up!" />
-        </form>
-      </div>
-    </div>
-    <!-- /Modal Sign Up window -->
     <!-- HOME -->
     <section id="section-home" class="flex-container">
       <div class="div-section-head">
@@ -262,30 +235,16 @@
       </div>
       <hr />
       <div class="div-section-content">
-        <form id="form-contact" class="flex-container">
-          <input id="contact-name" type="text" placeholder="Your names" />
-          <input id="contact-surname" type="text" placeholder="Your surnames" />
-          <input
-            id="contact-email"
-            type="email"
-            placeholder="Your email address"
-          />
-          <textarea
-            id="contact-textarea"
-            placeholder="Your message..."
-          ></textarea>
+        <form class="contact-form flex-container">
+          <input class="form-text-field" type="text" placeholder="Your names" />
+          <input class="form-text-field" type="text" placeholder="Your surnames" />
+          <input class="form-text-field" type="email" placeholder="Your email address"/>
+          <textarea placeholder="Your message..."></textarea>
           <input type="submit" value="Submit" />
         </form>
       </div>
     </section>
     <!-- /CONTACT -->
-    <footer>
-      <nav id="nav-social-footer">
-        <a href="#" class="a-social-link">FACEBOOK</a
-        ><a href="#" class="a-social-link">TWITTER</a
-        ><a href="#" class="a-social-link">INSTAGRAM</a>
-      </nav>
-    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
