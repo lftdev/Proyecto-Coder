@@ -1,6 +1,6 @@
 const nav_menu_header = document.querySelector("#nav-menu-header")
 
-const btn_menu = document.querySelector(".btn-menu")
+const btn_menu = document.querySelector("#btn-menu")
 btn_menu.addEventListener("click", on_click_menu)
 
 const signup_window = document.querySelector("#div-signup-window")
@@ -31,9 +31,5 @@ function on_click_btn_signup()
 
 function sw_color_on_scroll(scrollY)
 {
-    if (scrollY >= window.innerHeight)
-        alert("scroll")
-        /* document.querySelector("header").classList.add("sw-color-on-scroll") */
-    else
-        document.querySelector("header").classList.remove("sw-color-on-scroll")
+    scrollY >= window.innerHeight? document.querySelector("header").classList.add("sw-color-on-scroll") : document.querySelector("header").classList.remove("sw-color-on-scroll")
 }
