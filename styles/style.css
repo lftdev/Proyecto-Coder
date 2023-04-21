@@ -14,7 +14,6 @@ hr
     width: 25vh;
     height: 4px;
     border: none;
-    border-radius: 10px;
     opacity: 1;
     background-color: #FF3C38;
 }
@@ -27,6 +26,7 @@ a:hover
 {
     font-weight: 900;
     transition: all 300ms;
+    color: #FFF275;
 }
 img
 {
@@ -49,6 +49,14 @@ textarea
 .hide-on-screen-lg
 {
     display: block;
+}
+.on-modal-show
+{
+    overflow: hidden;
+}
+.rounded
+{
+    border-radius: 15px;
 }
 button
 {
@@ -73,7 +81,7 @@ button
 header.flex-container
 {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     width: 100vw;
     justify-content: space-between;
@@ -125,11 +133,11 @@ header nav ul a
 }
 /* /HEADER */
 /* BODY */
-body section:not(#section-home, main.latest-news)
+body section
 {
     margin: 20px;
 }
-section.flex-container, form.flex-container
+main.flex-container, section.flex-container, form.flex-container
 {
     flex-direction: column;
 }
@@ -137,20 +145,20 @@ section.flex-container, form.flex-container
 {
     text-align: center;
 }
+.div-section-head p
+{
+    font-style: italic;
+}
 .div-section-content p
 {
     text-align: justify;
 }
-.div-section-head p:not(#section-home p):not(main.latest-news p)
-{
-    font-style: italic;
-}
-#section-home
+#main-home
 {
     background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
     height: 100vh;
 }
-#section-home, main.latest-news
+#main-home, #main-news
 {
     color: white;
 }
@@ -160,25 +168,100 @@ section.flex-container, form.flex-container
 }
 .carousel-item img
 {
-    border-radius: 10px;
     object-fit: cover;
     height: 300px;
 }
 .carousel-caption
 {
     background-color: rgba(0, 0, 0, .6);
-    border-radius: 10px;
     padding: 0 10px;
 }
 .carousel-control-prev, .carousel-control-next
 {
     margin-top: 30%;
 }
+#section-news.flex-container
+{
+    gap: 20px;
+}
+#section-news #art1
+{
+    background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
+}
+#section-news #art2
+{
+    background-image: url(../assets/images/news/football-gc553cff1b_1280.jpg);
+}
+#section-news #art3
+{
+    background-image: url(../assets/images/news/football-stadium-3952062_1920.jpg);
+}
+#section-news #art4
+{
+    background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
+}
 /* NEWS PAGE */
-main.latest-news.flex-container
+#main-news
 {
     background: url(../assets/images/news/training-828741_1920.jpg) no-repeat center center fixed;
     height: 100vh;
+}
+#news-page-section-grid .div-section-content
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.article-card.flex-container
+{
+    background: center center no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+#news-page-section-grid #art1
+{
+    background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
+}
+#news-page-section-grid #art2
+{
+    background-image: url(../assets/images/news/football-gc553cff1b_1280.jpg);
+}
+#news-page-section-grid #art3
+{
+    background-image: url(../assets/images/news/football-stadium-3952062_1920.jpg);
+}
+#news-page-section-grid #art4
+{
+    background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
+}
+#news-page-section-grid #art5
+{
+    background: url(../assets/images/news/stadium-gd6ea72586_1280.jpg);
+}
+#news-page-section-grid #art6
+{
+    background: url(../assets/images/news/basketball-g749eb4114_1280.jpg);
+}
+.article-caption
+{
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+.article-caption a span
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 /* /NEWS PAGE */
 /* /BODY */
@@ -235,7 +318,7 @@ footer nav a:hover
 }
 .sw-color-on-scroll
 {
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .6);
 }
 .sw-color-on-scroll a
 {
@@ -245,15 +328,26 @@ footer nav a:hover
 {
     color: #FFF275;
 }
-#sw-color-on-scroll .btn-menu span
+.sw-color-on-scroll #btn-menu span
 {
     background-color: #FF3C38;    
 }
-#sw-color-on-scroll .btn-menu:hover span
+.sw-color-on-scroll #btn-menu:hover span
 {
     background-color: #FFF275;
 }
 /* /SCRIPTS */
+@media (min-width: 700px)
+{
+    #section-news .container
+    {
+        min-height: 500px;    
+    }
+    #news-page-section-grid .div-section-content
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media (min-width: 900px)
 {
     header nav
@@ -267,7 +361,7 @@ footer nav a:hover
         flex-direction: row;
         background-color: transparent;
     }
-    #section-home
+    #main-home
     {
         background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;
     }
@@ -286,5 +380,9 @@ footer nav a:hover
     .hide-on-screen-sm
     {
         display: block;
+    }
+    #news-page-section-grid .div-section-content
+    {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
