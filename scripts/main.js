@@ -19,5 +19,7 @@ function on_click_menu()
 
 function sw_color_on_scroll(scrollY)
 {
-    scrollY >= window.innerHeight? document.querySelector("header.mutable").classList.add("sw-color-on-scroll") : document.querySelector("header").classList.remove("sw-color-on-scroll")
+    let mutable_header = document.querySelector("header.mutable")
+    if (mutable_header != null)
+        scrollY >= window.innerHeight? mutable_header.classList.add("sw-color-on-scroll") : mutable_header.classList.remove("sw-color-on-scroll")
 }
