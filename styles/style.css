@@ -54,16 +54,10 @@ textarea
 {
     border-radius: 15px;
 }
-button
-{
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
-}
 .btn-type1
 {
     background-color: #FF3C38;
-    border: #FF3C38;
+    border: 2px solid #FF3C38;
     color: white;
 }
 .btn-type2
@@ -71,6 +65,10 @@ button
     background-color: transparent;
     border: 2px solid #FFF275;
     color: #FFF275;
+}
+a.btn-type1, a.btn-type2
+{
+    padding: 10px 20px;
 }
 /* /GENERAL */
 /* HEADER */
@@ -197,9 +195,9 @@ main.flex-container, section.flex-container, form.flex-container
     background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }
 /* GALLERY PAGE */
-#main-gallery
+#main-gallery, #main-signup
 {
-   margin-top: 60px; 
+    margin-top: 60px;
 }
 #main-gallery.flex-container
 {
@@ -335,6 +333,9 @@ main.flex-container, section.flex-container, form.flex-container
     z-index: 1;
 }
 /* /NEWS PAGE */
+/* SIGNUP PAGE */
+
+/* /SIGNUP PAGE */
 /* /BODY */
 /* FOOTER */
 footer.flex-container
@@ -418,9 +419,9 @@ footer nav a:hover
     {
         grid-template-columns: 1fr 1fr;
     }
-    #main-gallery
+    #main-gallery, #main-signup
     {
-    margin-top: 100px; 
+        margin-top: 100px; 
     }
     #main-gallery .div-section-content
     {
