@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 /* GENERAL */
+html, body
+{
+    height: 100%;
+}
 body
 {
     font-family: 'Ubuntu', sans-serif;
@@ -176,7 +180,7 @@ main.flex-container, section.flex-container, form.flex-container
 }
 .carousel-control-prev, .carousel-control-next
 {
-    margin-top: 30%;
+    margin-top: 10%;
 }
 #section-news #art1
 {
@@ -195,7 +199,7 @@ main.flex-container, section.flex-container, form.flex-container
     background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }
 /* GALLERY PAGE */
-#main-gallery, #main-signup
+#main-gallery, #main-signup, #main-contact
 {
     margin-top: 60px;
 }
@@ -334,7 +338,12 @@ main.flex-container, section.flex-container, form.flex-container
 }
 /* /NEWS PAGE */
 /* SIGNUP PAGE */
-
+footer.send-bottom
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 /* /SIGNUP PAGE */
 /* /BODY */
 /* FOOTER */
@@ -419,7 +428,7 @@ footer nav a:hover
     {
         grid-template-columns: 1fr 1fr;
     }
-    #main-gallery, #main-signup
+    #main-gallery, #main-signup, #main-contact
     {
         margin-top: 100px; 
     }
