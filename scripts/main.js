@@ -13,8 +13,11 @@ window.addEventListener("scroll", () =>
 function on_click_menu()
 {
     nav_menu_header.classList.toggle("hide-on-screen-sm")
-    for (let i = 1; i <= 3; i++)
-        document.querySelector(".btn-menu-bar" + i).classList.toggle("animated-bar" + i)
+    document.querySelectorAll("#btn-menu span").forEach(span => {
+        span.classList.toggle("animated")
+    })
+    /* for (let i = 1; i <= 3; i++)
+        document.querySelector(".btn-menu-bar" + i).classList.toggle("animated-bar" + i) */
 }
 
 function sw_color_on_scroll(scrollY)

@@ -103,11 +103,8 @@ header nav ul.flex-container a {
 }
 
 #btn-menu {
-  display: flex;
-  flex-direction: column;
-  width: 48px;
-  height: 38px;
-  gap: 5px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -121,6 +118,22 @@ header nav ul.flex-container a {
   transform-origin: left;
   transition: all 0.3s;
 }
+#btn-menu span:first-of-type.animated {
+  transform: rotate(45deg);
+}
+#btn-menu span:nth-of-type(2) {
+  margin-top: 8px;
+}
+#btn-menu span:nth-of-type(2).animated {
+  opacity: 0;
+  margin-left: -30px;
+}
+#btn-menu span:last-of-type {
+  margin-top: 8px;
+}
+#btn-menu span:last-of-type.animated {
+  transform: rotate(-45deg);
+}
 
 /* /HEADER */
 /* BODY */
@@ -130,6 +143,10 @@ body section {
 
 main.flex-container, section.flex-container, form.flex-container {
   flex-direction: column;
+}
+
+#main-home #main-news {
+  color: white;
 }
 
 .div-section-head {
@@ -170,10 +187,6 @@ main.flex-container, section.flex-container, form.flex-container {
   margin-top: 10%;
 }
 
-#main-news {
-  color: white;
-}
-
 #section-news #art1 {
   background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
 }
@@ -198,62 +211,51 @@ main.not-mutable {
 #main-gallery.flex-container {
   flex-direction: column;
 }
-
 #main-gallery .div-section-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "p1 p1" "p2 p3" "p4 p5" "p4 p5" "p6 p7" "p8 p8" "p9 p9";
   width: 100%;
 }
-
 #main-gallery .div-section-content div {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 300px;
 }
-
-.pic1 {
+#main-gallery .pic1 {
   background-image: url(../assets/images/gallery/goalkeeper-7893178_1280.jpg);
   grid-area: p1;
 }
-
-.pic2 {
+#main-gallery .pic2 {
   background-image: url(../assets/images/gallery/child-613199_1280.jpg);
   grid-area: p2;
 }
-
-.pic3 {
+#main-gallery .pic3 {
   background-image: url(../assets/images/gallery/soccer-3471402_1920.jpg);
   grid-area: p3;
 }
-
-.pic4 {
+#main-gallery .pic4 {
   background-image: url(../assets/images/gallery/basketball-14861.jpg);
   grid-area: p4;
 }
-
-.pic5 {
+#main-gallery .pic5 {
   background-image: url(../assets/images/gallery/tennis-251907_1920.jpg);
   grid-area: p5;
 }
-
-.pic6 {
+#main-gallery .pic6 {
   background-image: url(../assets/images/gallery/volleyball-1615685_1280.jpg);
   grid-area: p6;
 }
-
-.pic7 {
+#main-gallery .pic7 {
   background-image: url(../assets/images/gallery/volleyball-1567725_1280.jpg);
   grid-area: p7;
 }
-
-.pic8 {
+#main-gallery .pic8 {
   background-image: url(../assets/images/gallery/tennis-5782695_1280.jpg);
   grid-area: p8;
 }
-
-.pic9 {
+#main-gallery .pic9 {
   background-image: url(../assets/images/news/basketball-g749eb4114_1280.jpg);
   grid-area: p9;
 }
@@ -365,19 +367,6 @@ footer nav.flex-container a:hover {
 
 /* /FOOTER */
 /* SCRIPTS */
-.animated-bar1 {
-  transform: rotate(45deg);
-}
-
-.animated-bar2 {
-  opacity: 0;
-  margin-left: -30px;
-}
-
-.animated-bar3 {
-  transform: rotate(-45deg);
-}
-
 header.not-mutable, .sw-color-on-scroll {
   background: rgba(0, 0, 0, 0.6);
 }
