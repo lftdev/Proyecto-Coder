@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 /* GENERAL */
 html, body {
   height: 100%;
@@ -20,8 +21,10 @@ hr {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: #FF3C38;
+  text-align: center;
 }
 a:hover {
   font-weight: 900;
@@ -63,11 +66,18 @@ textarea {
   border: 2px solid #FF3C38;
   color: white;
 }
+.btn-type1:hover {
+  border-color: #2e2e2e;
+  background-color: #2e2e2e;
+}
 
 .btn-type2 {
   background-color: transparent;
   border: 2px solid #FFF275;
   color: #FFF275;
+}
+.btn-type2:hover {
+  border-color: #2e2e2e;
 }
 
 /* /GENERAL */
@@ -76,7 +86,7 @@ header.flex-container {
   position: fixed;
   z-index: 10;
   top: 0;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 20px 0 20px;
@@ -134,19 +144,26 @@ header nav ul.flex-container a {
 #btn-menu span:last-of-type.animated {
   transform: rotate(-45deg);
 }
+#btn-menu:hover span {
+  background-color: #FF3C38;
+}
 
 /* /HEADER */
 /* BODY */
 body section {
   margin: 20px;
 }
+body section .btn-type1 {
+  margin-top: 20px;
+}
 
 main.flex-container, section.flex-container, form.flex-container {
   flex-direction: column;
 }
 
-#main-home #main-news {
+#main-home, #main-news {
   color: white;
+  height: 100vh;
 }
 
 .div-section-head {
@@ -162,11 +179,9 @@ main.flex-container, section.flex-container, form.flex-container {
 
 #main-home {
   background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
-  height: 100vh;
 }
-
-#section-gallery.flex-container, #section-news.flex-container {
-  gap: 20px;
+#main-home .btn-type2 {
+  margin-top: 20px;
 }
 
 .carousel {

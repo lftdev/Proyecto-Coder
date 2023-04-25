@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 $color-primary: #FF3C38;
 $color-accent: #FFF275;
 $transparent-black: rgba(0, 0, 0, .6);
+$darker-grey: #2e2e2e;
 /* GENERAL */
 html, body {
     height: 100%;
@@ -19,9 +21,10 @@ hr {
     background-color: $color-primary;
 }
 a {
+    display: block;
     text-decoration: none;
     color: $color-primary;
-
+    text-align: center;
     &:hover {
         font-weight: 900;
         transition: all 300ms;
@@ -55,11 +58,18 @@ textarea {
     background-color: $color-primary;
     border: 2px solid $color-primary;
     color: white;
+    &:hover {
+        border-color: $darker-grey;
+        background-color: $darker-grey;;
+    }
 }
 .btn-type2 {
     background-color: transparent;
     border: 2px solid $color-accent;
     color: $color-accent;
+    &:hover {
+        border-color: $darker-grey;
+    }
 }
 /* /GENERAL */
 /* HEADER */
@@ -68,7 +78,7 @@ header {
         position: fixed;
         z-index: 10;
         top: 0;
-        width: 100vw;
+        width: 100%;
         justify-content: space-between;
         align-items: flex-start;
         padding: 10px 20px 0 20px;
@@ -110,10 +120,8 @@ header {
         margin-top: 6px;
         transform-origin: left;
         transition: all .3s;
-        &:first-of-type {
-            &.animated {
-                transform: rotate(45deg);
-            }
+        &:first-of-type.animated {
+            transform: rotate(45deg);
         }
         &:nth-of-type(2) {
             margin-top: 8px;
@@ -129,19 +137,24 @@ header {
             }
         }
     }
+    &:hover span {
+        background-color: $color-primary;
+    }
 }
 /* /HEADER */
 /* BODY */
-body {
-    section {
-        margin: 20px;
+body section {
+    margin: 20px;
+    .btn-type1 {
+        margin-top: 20px;
     }
 }
 main.flex-container, section.flex-container, form.flex-container {
     flex-direction: column;
 }
-#main-home #main-news {
+#main-home, #main-news {
     color: white;
+    height: 100vh;
 }
 .div-section-head {
     text-align: center;
@@ -149,17 +162,14 @@ main.flex-container, section.flex-container, form.flex-container {
         font-style: italic;
     }
 }
-.div-section-content {
-    p {
-        text-align: justify;
-    }
+.div-section-content p {
+    text-align: justify;
 }
 #main-home {
     background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
-    height: 100vh;
-}
-#section-gallery.flex-container, #section-news.flex-container {
-    gap: 20px;
+    .btn-type2 {
+        margin-top: 20px;
+    }
 }
 .carousel {
     z-index: 0;
@@ -285,7 +295,8 @@ main.not-mutable {
 #news-page-section-grid #art5 {
     background: url(../assets/images/news/stadium-gd6ea72586_1280.jpg);
 }
-#news-page-section-grid #art6 {     background: url(../assets/images/news/basketball-g749eb4114_1280.jpg) right center;
+#news-page-section-grid #art6 {
+    background: url(../assets/images/news/basketball-g749eb4114_1280.jpg) right center;
 }
 .article-caption {
     background-color: $transparent-black;

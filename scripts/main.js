@@ -5,13 +5,11 @@ btn_menu.addEventListener("click", on_click_menu)
 
 const signup_window = document.querySelector("#div-signup-window")
 
-window.addEventListener("scroll", () =>
-{
+window.addEventListener("scroll", () => {
     sw_color_on_scroll(window.scrollY)
 });
 
-function on_click_menu()
-{
+function on_click_menu() {
     nav_menu_header.classList.toggle("hide-on-screen-sm")
     document.querySelectorAll("#btn-menu span").forEach(span => {
         span.classList.toggle("animated")
@@ -20,8 +18,7 @@ function on_click_menu()
         document.querySelector(".btn-menu-bar" + i).classList.toggle("animated-bar" + i) */
 }
 
-function sw_color_on_scroll(scrollY)
-{
+function sw_color_on_scroll(scrollY) {
     let mutable_header = document.querySelector("header.mutable")
     if (mutable_header != null)
         scrollY >= window.innerHeight? mutable_header.classList.add("sw-color-on-scroll") : mutable_header.classList.remove("sw-color-on-scroll")
