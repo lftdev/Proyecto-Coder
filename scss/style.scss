@@ -9,6 +9,11 @@ html, body {
 }
 body {
     font-family: 'Ubuntu', sans-serif;
+    section {
+        .btn-type1 {
+            margin: 20px 0;
+        }
+    }
 }
 li {
     list-style: none;
@@ -21,7 +26,6 @@ hr {
     background-color: $color-primary;
 }
 a {
-    display: block;
     text-decoration: none;
     color: $color-primary;
     text-align: center;
@@ -143,12 +147,6 @@ header {
 }
 /* /HEADER */
 /* BODY */
-body section {
-    margin: 20px;
-    .btn-type1 {
-        margin-top: 20px;
-    }
-}
 main.flex-container, section.flex-container, form.flex-container {
     flex-direction: column;
 }
@@ -410,7 +408,7 @@ header.not-mutable a:hover, .sw-color-on-scroll a:hover {
         background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;
     }
     .carousel {
-        width: 1000px;
+        width: 900px;
     }
     .carousel-item img {
         height: auto;
