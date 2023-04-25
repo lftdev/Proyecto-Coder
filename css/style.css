@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 /* GENERAL */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -20,18 +21,18 @@ hr {
   height: 4px;
   border: none;
   opacity: 1;
-  background-color: #FF3C38;
+  background-color: #ff3c38;
 }
 
 a {
   text-decoration: none;
-  color: #FF3C38;
+  color: #ff3c38;
   text-align: center;
 }
 a:hover {
   font-weight: 900;
   transition: all 300ms;
-  color: #FFF275;
+  color: #fff275;
 }
 a.btn-type1, a.btn-type2 {
   padding: 10px 20px;
@@ -51,7 +52,8 @@ textarea {
   align-items: center;
 }
 
-.set-hidden, .hide-on-screen-sm {
+.set-hidden,
+.hide-on-screen-sm {
   display: none;
 }
 
@@ -64,8 +66,8 @@ textarea {
 }
 
 .btn-type1 {
-  background-color: #FF3C38;
-  border: 2px solid #FF3C38;
+  background-color: #ff3c38;
+  border: 2px solid #ff3c38;
   color: white;
 }
 .btn-type1:hover {
@@ -75,8 +77,8 @@ textarea {
 
 .btn-type2 {
   background-color: transparent;
-  border: 2px solid #FFF275;
-  color: #FFF275;
+  border: 2px solid #fff275;
+  color: #fff275;
 }
 .btn-type2:hover {
   border-color: #2e2e2e;
@@ -98,7 +100,7 @@ header a {
   color: white;
 }
 header a:hover {
-  color: #FF3C38;
+  color: #ff3c38;
 }
 header nav {
   position: absolute;
@@ -147,16 +149,19 @@ header nav ul.flex-container a {
   transform: rotate(-45deg);
 }
 #btn-menu:hover span {
-  background-color: #FF3C38;
+  background-color: #ff3c38;
 }
 
 /* /HEADER */
 /* BODY */
-main.flex-container, section.flex-container, form.flex-container {
+main.flex-container,
+section.flex-container,
+form.flex-container {
   flex-direction: column;
 }
 
-#main-home, #main-news {
+#main-home,
+#main-news {
   color: white;
   height: 100vh;
 }
@@ -193,7 +198,8 @@ main.flex-container, section.flex-container, form.flex-container {
   padding: 0 10px;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   margin-top: 10%;
 }
 
@@ -360,40 +366,43 @@ footer nav.flex-container a:hover {
 }
 
 .social-link-f {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .social-link-t {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .social-link-i {
-  color: #E1306C;
+  color: #e1306c;
 }
 
 .social-link-w {
-  color: #25D366;
+  color: #25d366;
 }
 
 /* /FOOTER */
 /* SCRIPTS */
-header.not-mutable, .sw-color-on-scroll {
+header.not-mutable,
+.sw-color-on-scroll {
   background: rgba(0, 0, 0, 0.6);
 }
 
-header.not-mutable a, .sw-color-on-scroll a {
-  color: #FF3C38;
+header.not-mutable a,
+.sw-color-on-scroll a {
+  color: #ff3c38;
 }
 
-header.not-mutable a:hover, .sw-color-on-scroll a:hover {
-  color: #FFF275;
+header.not-mutable a:hover,
+.sw-color-on-scroll a:hover {
+  color: #fff275;
 }
 
 .sw-color-on-scroll #btn-menu span {
-  background-color: #FF3C38;
+  background-color: #ff3c38;
 }
 .sw-color-on-scroll #btn-menu:hover span {
-  background-color: #FFF275;
+  background-color: #fff275;
 }
 
 /* /SCRIPTS */
