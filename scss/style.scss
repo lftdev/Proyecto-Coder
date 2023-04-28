@@ -6,23 +6,38 @@
   color: white;
   height: 100vh;
 }
-.div-section-head {
-  text-align: center;
-  p {
-    font-style: italic;
-  }
-}
-.div-section-content p {
-  text-align: justify;
-}
 #main-home {
   background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
-  .btn-type2 {
-    margin-top: 20px;
+  /* SIGNUP MODAL */
+  .div-modal {
+      position: absolute;
+      top: 25vh;
+      width: 100%;
+      background-color: $darker-grey;
+      padding: 50px;
+      max-width: 500px;
+      box-shadow: 0 0 0 100vmax $transparent-black;
+      z-index: 10;
+      .btn-close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-image: url(../assets/images/icons/close_FILL0_wght400_GRAD0_opsz48.svg);
+        background-color: transparent;
+        width: 48px;
+        height: 48px;
+        border:none;
+      }
+      .flex-container {
+        flex-direction: column;
+      }
   }
+  /* /SIGNUP MODAL */
 }
 .carousel {
   z-index: 0;
+  width: 100%;
+  max-width: 400px;
 }
 .carousel-item img {
   object-fit: cover;
@@ -31,6 +46,10 @@
 .carousel-caption {
   background-color: $transparent-black;
   padding: 0 10px;
+  .btn-type2 {
+    padding: 0;
+    border: none;
+  }
 }
 .carousel-control-prev,
 .carousel-control-next {
@@ -48,6 +67,22 @@
 #section-news #art4 {
   background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }
+/* ABOUT PAGE */
+#main-about section {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+  h2 {
+    text-align: center;
+  }
+  &:nth-of-type(odd) {
+    background-color: $darker-grey;
+  }
+  &:nth-of-type(even) {
+    background-color: $color-primary;
+  }
+}
+/* /ABOUT PAGE */
 /* GALLERY PAGE */
 main.not-mutable {
   margin-top: 60px;
@@ -165,10 +200,11 @@ main.not-mutable {
   z-index: 1;
 }
 /* /NEWS PAGE */
-/* SIGNUP PAGE */
-/* /SIGNUP PAGE */
 /* /BODY */
 /* SCRIPTS */
+.on-modal-show {
+  overflow: hidden;
+}
 header.not-mutable,
 .sw-color-on-scroll {
   background: $transparent-black;
@@ -212,6 +248,10 @@ header.not-mutable a:hover,
       height: 500px;
     }
   }
+  #main-about section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 @media (min-width: 900px) {
   header nav {
@@ -227,7 +267,7 @@ header.not-mutable a:hover,
     background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;
   }
   .carousel {
-    width: 900px;
+    max-width: 900px;
   }
   .carousel-item img {
     height: auto;

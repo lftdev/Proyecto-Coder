@@ -31,13 +31,16 @@ a {
   text-align: center;
   &:hover {
     font-weight: 900;
-    transition: all 300ms;
+    transition: all 0.3s;
     color: $color-accent;
   }
   &.btn-type1,
   &.btn-type2 {
     padding: 10px 20px;
   }
+}
+button, input[type="submit"] {
+  transition: all 0.3s;
 }
 img {
   max-width: 100%;
@@ -50,7 +53,7 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.set-hidden,
+.set-closed,
 .hide-on-screen-sm {
   display: none;
 }
@@ -63,23 +66,39 @@ textarea {
 .btn-type1 {
   background-color: $color-primary;
   border: 2px solid $color-primary;
+  border-radius: 15px;
   color: white;
+  padding: 10px 20px;
   &:hover {
     border-color: $darker-grey;
     background-color: $darker-grey;
+    color: $color-accent
   }
 }
 .btn-type2 {
   background-color: transparent;
   border: 2px solid $color-accent;
+  border-radius: 15px;
   color: $color-accent;
+  padding: 10px 20px;
   &:hover {
     border-color: $darker-grey;
+    color: $color-primary
   }
-}main.flex-container,
+}
+main.flex-container,
 section.flex-container,
 form.flex-container {
   flex-direction: column;
+}
+.div-section-head {
+  text-align: center;
+  p {
+    font-style: italic;
+  }
+}
+.div-section-content p {
+  text-align: justify;
 }
 /* /GENERAL */
 /* HEADER */
@@ -92,13 +111,13 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px 20px 0 20px;
-    transition: all 300ms;
+    transition: all 0.3s;
   }
   a {
     color: white;
-  }
-  a:hover {
-    color: $color-primary;
+    &:hover {
+      color: $color-primary;
+    }
   }
   nav {
     position: absolute;

@@ -31,11 +31,15 @@ a {
 }
 a:hover {
   font-weight: 900;
-  transition: all 300ms;
+  transition: all 0.3s;
   color: #fff275;
 }
 a.btn-type1, a.btn-type2 {
   padding: 10px 20px;
+}
+
+button, input[type=submit] {
+  transition: all 0.3s;
 }
 
 img {
@@ -52,7 +56,7 @@ textarea {
   align-items: center;
 }
 
-.set-hidden,
+.set-closed,
 .hide-on-screen-sm {
   display: none;
 }
@@ -68,26 +72,43 @@ textarea {
 .btn-type1 {
   background-color: #ff3c38;
   border: 2px solid #ff3c38;
+  border-radius: 15px;
   color: white;
+  padding: 10px 20px;
 }
 .btn-type1:hover {
   border-color: #2e2e2e;
   background-color: #2e2e2e;
+  color: #fff275;
 }
 
 .btn-type2 {
   background-color: transparent;
   border: 2px solid #fff275;
+  border-radius: 15px;
   color: #fff275;
+  padding: 10px 20px;
 }
 .btn-type2:hover {
   border-color: #2e2e2e;
+  color: #ff3c38;
 }
 
 main.flex-container,
 section.flex-container,
 form.flex-container {
   flex-direction: column;
+}
+
+.div-section-head {
+  text-align: center;
+}
+.div-section-head p {
+  font-style: italic;
+}
+
+.div-section-content p {
+  text-align: justify;
 }
 
 /* /GENERAL */
@@ -100,7 +121,7 @@ header.flex-container {
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 20px 0 20px;
-  transition: all 300ms;
+  transition: all 0.3s;
 }
 header a {
   color: white;
@@ -205,26 +226,39 @@ footer nav.flex-container a:hover {
   height: 100vh;
 }
 
-.div-section-head {
-  text-align: center;
-}
-.div-section-head p {
-  font-style: italic;
-}
-
-.div-section-content p {
-  text-align: justify;
-}
-
 #main-home {
   background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
+  /* SIGNUP MODAL */
+  /* /SIGNUP MODAL */
 }
-#main-home .btn-type2 {
-  margin-top: 20px;
+#main-home .div-modal {
+  position: absolute;
+  top: 25vh;
+  width: 100%;
+  background-color: #2e2e2e;
+  padding: 50px;
+  max-width: 500px;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+#main-home .div-modal .btn-close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../assets/images/icons/close_FILL0_wght400_GRAD0_opsz48.svg);
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  border: none;
+}
+#main-home .div-modal .flex-container {
+  flex-direction: column;
 }
 
 .carousel {
   z-index: 0;
+  width: 100%;
+  max-width: 400px;
 }
 
 .carousel-item img {
@@ -235,6 +269,10 @@ footer nav.flex-container a:hover {
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0 10px;
+}
+.carousel-caption .btn-type2 {
+  padding: 0;
+  border: none;
 }
 
 .carousel-control-prev,
@@ -258,6 +296,23 @@ footer nav.flex-container a:hover {
   background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }
 
+/* ABOUT PAGE */
+#main-about section {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+}
+#main-about section h2 {
+  text-align: center;
+}
+#main-about section:nth-of-type(odd) {
+  background-color: #2e2e2e;
+}
+#main-about section:nth-of-type(even) {
+  background-color: #ff3c38;
+}
+
+/* /ABOUT PAGE */
 /* GALLERY PAGE */
 main.not-mutable {
   margin-top: 60px;
@@ -379,10 +434,12 @@ main.not-mutable {
 }
 
 /* /NEWS PAGE */
-/* SIGNUP PAGE */
-/* /SIGNUP PAGE */
 /* /BODY */
 /* SCRIPTS */
+.on-modal-show {
+  overflow: hidden;
+}
+
 header.not-mutable,
 .sw-color-on-scroll {
   background: rgba(0, 0, 0, 0.6);
@@ -424,6 +481,10 @@ header.not-mutable a:hover,
     background-size: cover;
     height: 500px;
   }
+  #main-about section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 @media (min-width: 900px) {
   header nav {
@@ -439,7 +500,7 @@ header.not-mutable a:hover,
     background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;
   }
   .carousel {
-    width: 900px;
+    max-width: 900px;
   }
   .carousel-item img {
     height: auto;
