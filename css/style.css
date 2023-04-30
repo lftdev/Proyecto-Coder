@@ -26,8 +26,8 @@ hr {
 
 a {
   text-decoration: none;
-  color: #ff3c38;
   text-align: center;
+  color: #ff3c38;
 }
 a:hover {
   font-weight: 900;
@@ -38,7 +38,8 @@ a.btn-type1, a.btn-type2 {
   padding: 10px 20px;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
   transition: all 0.3s;
 }
 
@@ -94,6 +95,26 @@ textarea {
   color: #ff3c38;
 }
 
+.social-nav li:first-of-type a {
+  color: #4267b2;
+}
+.social-nav li:nth-of-type(2) a {
+  color: #1da1f2;
+}
+.social-nav li:nth-of-type(3) a {
+  color: #e1306c;
+}
+.social-nav li:last-of-type a {
+  color: #25d366;
+}
+.social-nav li:hover a {
+  color: white;
+}
+.social-nav ul.flex-container {
+  flex-direction: row;
+  gap: 20px;
+}
+
 main.flex-container,
 section.flex-container,
 form.flex-container {
@@ -113,37 +134,61 @@ form.flex-container {
 
 /* /GENERAL */
 /* HEADER */
-header.flex-container {
+header {
   position: fixed;
   z-index: 10;
   top: 0;
   width: 100%;
+  padding: 10px 20px 0 20px;
+}
+header.flex-container {
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 10px 20px 0 20px;
-  transition: all 0.3s;
 }
-header a {
+header div > a,
+header #nav-menu-header a {
   color: white;
 }
-header a:hover {
+header div > a:hover,
+header #nav-menu-header a:hover {
   color: #ff3c38;
 }
-header nav {
+header #nav-menu-header ul {
   position: absolute;
   top: 60px;
-  right: 40px;
+  right: 20px;
 }
-header nav ul.flex-container {
+header #nav-menu-header ul.flex-container {
   flex-direction: column;
-  background-color: black;
+  align-items: flex-end;
 }
-header nav ul.flex-container a {
+header #nav-menu-header ul.flex-container a {
   display: block;
   padding: 20px;
 }
+header nav.social-nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+header.deployed {
+  height: 60%;
+  background-color: black;
+}
+header.not-mutable, header.sw-color-on-scroll {
+  background: black;
+}
+header.not-mutable a, header.sw-color-on-scroll a {
+  color: #ff3c38;
+}
+header.not-mutable a:hover, header.sw-color-on-scroll a:hover {
+  color: #fff275;
+}
 
 #btn-menu {
+  position: absolute;
+  right: 20px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -159,20 +204,20 @@ header nav ul.flex-container a {
   transform-origin: left;
   transition: all 0.3s;
 }
-#btn-menu span:first-of-type.animated {
+#btn-menu span:first-of-type.deployed {
   transform: rotate(45deg);
 }
 #btn-menu span:nth-of-type(2) {
   margin-top: 8px;
 }
-#btn-menu span:nth-of-type(2).animated {
+#btn-menu span:nth-of-type(2).deployed {
   opacity: 0;
   margin-left: -30px;
 }
 #btn-menu span:last-of-type {
   margin-top: 8px;
 }
-#btn-menu span:last-of-type.animated {
+#btn-menu span:last-of-type.deployed {
   transform: rotate(-45deg);
 }
 #btn-menu:hover span {
@@ -192,30 +237,6 @@ footer.flex-container {
   align-items: center;
   color: white;
   padding: 20px;
-}
-footer nav.flex-container {
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
-footer nav.flex-container a:hover {
-  color: white;
-}
-
-.social-link-f {
-  color: #4267b2;
-}
-
-.social-link-t {
-  color: #1da1f2;
-}
-
-.social-link-i {
-  color: #e1306c;
-}
-
-.social-link-w {
-  color: #25d366;
 }
 
 /* /FOOTER */
@@ -440,21 +461,6 @@ main.not-mutable {
   overflow: hidden;
 }
 
-header.not-mutable,
-.sw-color-on-scroll {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-header.not-mutable a,
-.sw-color-on-scroll a {
-  color: #ff3c38;
-}
-
-header.not-mutable a:hover,
-.sw-color-on-scroll a:hover {
-  color: #fff275;
-}
-
 .sw-color-on-scroll #btn-menu span {
   background-color: #ff3c38;
 }
@@ -487,14 +493,27 @@ header.not-mutable a:hover,
   }
 }
 @media (min-width: 900px) {
-  header nav {
+  header.flex-container {
+    flex-direction: row;
+  }
+  header #nav-menu-header ul.flex-container {
     position: relative;
     top: 0;
-    right: 0;
-  }
-  header nav ul.flex-container {
     flex-direction: row;
-    background-color: transparent;
+    align-items: center;
+  }
+  header #nav-menu-header ul.flex-container a {
+    display: block;
+    padding: 20px;
+  }
+  header nav.social-nav {
+    position: relative;
+  }
+  header nav.social-nav.set-closed {
+    display: block;
+  }
+  header nav.social-nav ul.flex-container {
+    flex-direction: row;
   }
   #main-home {
     background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;

@@ -13,7 +13,7 @@
       position: absolute;
       top: 25vh;
       width: 100%;
-      background-color: $darker-grey;
+      background-color: $color3;
       padding: 50px;
       max-width: 500px;
       box-shadow: 0 0 0 100vmax $transparent-black;
@@ -76,10 +76,10 @@
     text-align: center;
   }
   &:nth-of-type(odd) {
-    background-color: $darker-grey;
+    background-color: $color3;
   }
   &:nth-of-type(even) {
-    background-color: $color-primary;
+    background-color: $color1;
   }
 }
 /* /ABOUT PAGE */
@@ -205,24 +205,12 @@ main.not-mutable {
 .on-modal-show {
   overflow: hidden;
 }
-header.not-mutable,
-.sw-color-on-scroll {
-  background: $transparent-black;
-}
-header.not-mutable a,
-.sw-color-on-scroll a {
-  color: $color-primary;
-}
-header.not-mutable a:hover,
-.sw-color-on-scroll a:hover {
-  color: $color-accent;
-}
 .sw-color-on-scroll #btn-menu {
   span {
-    background-color: $color-primary;
+    background-color: $color1;
   }
   &:hover span {
-    background-color: $color-accent;
+    background-color: $color2;
   }
 }
 /* /SCRIPTS */
@@ -254,13 +242,30 @@ header.not-mutable a:hover,
   }
 }
 @media (min-width: 900px) {
-  header nav {
-    position: relative;
-    top: 0;
-    right: 0;
-    ul.flex-container {
+  header {
+    &.flex-container {
       flex-direction: row;
-      background-color: transparent;
+    }
+    #nav-menu-header {
+      ul.flex-container {
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        a {
+          display: block;
+          padding: 20px;
+        }
+      }
+    }
+    nav.social-nav {
+      position: relative;
+      &.set-closed {
+        display: block;
+      }
+      ul.flex-container {
+        flex-direction: row;
+      }
     }
   }
   #main-home {

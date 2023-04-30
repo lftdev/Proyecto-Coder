@@ -1,7 +1,7 @@
-$color-primary: #ff3c38;
-$color-accent: #fff275;
+$color1: #ff3c38;
+$color2: #fff275;
+$color3: #2e2e2e;
 $transparent-black: rgba(0, 0, 0, 0.6);
-$darker-grey: #2e2e2e;
 /* GENERAL */
 html,
 body {
@@ -23,23 +23,24 @@ hr {
   height: 4px;
   border: none;
   opacity: 1;
-  background-color: $color-primary;
+  background-color: $color1;
 }
 a {
   text-decoration: none;
-  color: $color-primary;
   text-align: center;
+  color: $color1;
   &:hover {
     font-weight: 900;
     transition: all 0.3s;
-    color: $color-accent;
+    color: $color2;
   }
   &.btn-type1,
   &.btn-type2 {
     padding: 10px 20px;
   }
 }
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   transition: all 0.3s;
 }
 img {
@@ -64,26 +65,49 @@ textarea {
   border-radius: 15px;
 }
 .btn-type1 {
-  background-color: $color-primary;
-  border: 2px solid $color-primary;
+  background-color: $color1;
+  border: 2px solid $color1;
   border-radius: 15px;
   color: white;
   padding: 10px 20px;
   &:hover {
-    border-color: $darker-grey;
-    background-color: $darker-grey;
-    color: $color-accent
+    border-color: $color3;
+    background-color: $color3;
+    color: $color2;
   }
 }
 .btn-type2 {
   background-color: transparent;
-  border: 2px solid $color-accent;
+  border: 2px solid $color2;
   border-radius: 15px;
-  color: $color-accent;
+  color: $color2;
   padding: 10px 20px;
   &:hover {
-    border-color: $darker-grey;
-    color: $color-primary
+    border-color: $color3;
+    color: $color1;
+  }
+}
+.social-nav {
+  li {
+    &:first-of-type a {
+      color: #4267b2;
+    }
+    &:nth-of-type(2) a {
+      color: #1da1f2;
+    }
+    &:nth-of-type(3) a {
+      color: #e1306c;
+    }
+    &:last-of-type a {
+      color: #25d366;
+    }
+    &:hover a {
+      color: white;
+    }
+  }
+  ul.flex-container {
+    flex-direction: row;
+    gap: 20px;
   }
 }
 main.flex-container,
@@ -103,38 +127,63 @@ form.flex-container {
 /* /GENERAL */
 /* HEADER */
 header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px 0 20px;
   &.flex-container {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10px 20px 0 20px;
-    transition: all 0.3s;
   }
-  a {
+  div > a,
+  #nav-menu-header a {
     color: white;
     &:hover {
-      color: $color-primary;
+      color: $color1;
     }
   }
-  nav {
-    position: absolute;
-    top: 60px;
-    right: 40px;
-
-    ul.flex-container {
-      flex-direction: column;
-      background-color: black;
-      a {
-        display: block;
-        padding: 20px;
+  #nav-menu-header {
+    ul {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      &.flex-container {
+        flex-direction: column;
+        align-items: flex-end;
+        a {
+          display: block;
+          padding: 20px;
+        }
       }
     }
   }
+  nav.social-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &.deployed {
+    height: 60%;
+    background-color: black;
+  }
+  &.not-mutable,
+  &.sw-color-on-scroll {
+    background: black;
+  }
+  &.not-mutable a,
+  &.sw-color-on-scroll a {
+    color: $color1;
+  }
+  &.not-mutable a:hover,
+  &.sw-color-on-scroll a:hover {
+    color: $color2;
+  }
 }
 #btn-menu {
+  position: absolute;
+  right: 20px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -148,25 +197,25 @@ header {
     margin-top: 6px;
     transform-origin: left;
     transition: all 0.3s;
-    &:first-of-type.animated {
+    &:first-of-type.deployed {
       transform: rotate(45deg);
     }
     &:nth-of-type(2) {
       margin-top: 8px;
-      &.animated {
+      &.deployed {
         opacity: 0;
         margin-left: -30px;
       }
     }
     &:last-of-type {
       margin-top: 8px;
-      &.animated {
+      &.deployed {
         transform: rotate(-45deg);
       }
     }
   }
   &:hover span {
-    background-color: $color-primary;
+    background-color: $color1;
   }
 }
 /* /HEADER */
@@ -184,25 +233,5 @@ footer {
     color: white;
     padding: 20px;
   }
-  nav.flex-container {
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    a:hover {
-      color: white;
-    }
-  }
-}
-.social-link-f {
-  color: #4267b2;
-}
-.social-link-t {
-  color: #1da1f2;
-}
-.social-link-i {
-  color: #e1306c;
-}
-.social-link-w {
-  color: #25d366;
 }
 /* /FOOTER */

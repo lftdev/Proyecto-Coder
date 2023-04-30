@@ -1,5 +1,3 @@
-const nav_menu_header = document.querySelector("#nav-menu-header")
-
 const btn_menu = document.querySelector("#btn-menu")
 btn_menu.addEventListener("click", on_click_menu)
 
@@ -10,10 +8,13 @@ window.addEventListener("scroll", () => {
 });
 
 function on_click_menu() {
-    nav_menu_header.classList.toggle("hide-on-screen-sm")
+    document.querySelector("header").classList.toggle("deployed")
+    document.querySelector("#nav-menu-header").classList.toggle("hide-on-screen-sm")
+    document.querySelector("header .social-nav").classList.toggle("set-closed")
     document.querySelectorAll("#btn-menu span").forEach(span => {
-        span.classList.toggle("animated")
+        span.classList.toggle("deployed")
     })
+    
 }
 
 function sw_color_on_scroll(scrollY) {
