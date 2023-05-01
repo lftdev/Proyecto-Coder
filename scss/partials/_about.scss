@@ -1,0 +1,19 @@
+#main-about section {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    padding: 20px;
+    place-items: center;
+    div.div-section-content {
+        padding: 50px;
+        h2 {
+        text-align: center;
+        }
+    }
+    &:nth-of-type(odd) {
+      background-color: $color3;
+    }
+    &:nth-of-type(even) {
+      background-color: $color1;
+    }
+  }

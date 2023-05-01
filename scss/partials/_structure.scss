@@ -106,8 +106,7 @@ textarea {
     }
   }
   ul.flex-container {
-    flex-direction: row;
-    gap: 20px;
+    gap: 10px;
   }
 }
 main.flex-container,
@@ -132,6 +131,7 @@ header {
   top: 0;
   width: 100%;
   padding: 10px 20px 0 20px;
+  transition: all .3s;
   &.flex-container {
     flex-direction: column;
     justify-content: space-between;

@@ -111,8 +111,7 @@ textarea {
   color: white;
 }
 .social-nav ul.flex-container {
-  flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
 
 main.flex-container,
@@ -140,6 +139,7 @@ header {
   top: 0;
   width: 100%;
   padding: 10px 20px 0 20px;
+  transition: all 0.3s;
 }
 header.flex-container {
   flex-direction: column;
@@ -240,7 +240,6 @@ footer.flex-container {
 }
 
 /* /FOOTER */
-/* BODY */
 #main-home,
 #main-news {
   color: white;
@@ -317,13 +316,17 @@ footer.flex-container {
   background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }
 
-/* ABOUT PAGE */
 #main-about section {
   display: grid;
   grid-template-columns: 1fr;
   color: white;
+  padding: 20px;
+  place-items: center;
 }
-#main-about section h2 {
+#main-about section div.div-section-content {
+  padding: 50px;
+}
+#main-about section div.div-section-content h2 {
   text-align: center;
 }
 #main-about section:nth-of-type(odd) {
@@ -333,8 +336,6 @@ footer.flex-container {
   background-color: #ff3c38;
 }
 
-/* /ABOUT PAGE */
-/* GALLERY PAGE */
 main.not-mutable {
   margin-top: 60px;
 }
@@ -391,8 +392,6 @@ main.not-mutable {
   grid-area: p9;
 }
 
-/* /GALLERY PAGE */
-/* NEWS PAGE */
 #main-news {
   background: url(../assets/images/news/training-828741_1920.jpg) no-repeat center center fixed;
   height: 100vh;
@@ -454,8 +453,6 @@ main.not-mutable {
   z-index: 1;
 }
 
-/* /NEWS PAGE */
-/* /BODY */
 /* SCRIPTS */
 .on-modal-show {
   overflow: hidden;
@@ -470,6 +467,10 @@ main.not-mutable {
 
 /* /SCRIPTS */
 @media (min-width: 700px) {
+  header.deployed {
+    height: 100%;
+    overflow: scroll;
+  }
   #section-news .container {
     min-height: 500px;
   }

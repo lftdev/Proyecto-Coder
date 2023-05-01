@@ -11,29 +11,39 @@
   </head>
   <body>
     <header class="not-mutable flex-container">
-      <a href="../index.html"><h1>LOGO</h1></a>
-      <button id="btn-menu" class="hide-on-screen-lg">
-        <span class="rounded"></span>
-        <span class="rounded"></span>
-        <span class="rounded"></span>
-      </button>
-      <nav id="nav-menu-header" class="hide-on-screen-sm">
+      <div class="flex-container">
+        <a href="../index.html"><h2>LOGO</h2></a>
+        <button id="btn-menu" class="hide-on-screen-lg">
+          <span class="btn-menu-bar1"></span>
+          <span class="btn-menu-bar2"></span>
+          <span class="btn-menu-bar3"></span>
+        </button>
+        <nav id="nav-menu-header" class="hide-on-screen-sm">
+          <ul class="flex-container">
+            <li>
+              <a href="../index.html">HOME</a>
+            </li>
+            <li>
+              <a href="../index.html#section-about">ABOUT US</a>
+            </li>
+            <li>
+              <a href="../index.html#section-gallery">GALLERY</a>
+            </li>
+            <li>
+              <a href="../index.html#section-news">NEWS</a>
+            </li>
+            <li>
+              <a href="./contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="social-nav set-closed">
         <ul class="flex-container">
-          <li>
-            <a href="../index.html">HOME</a>
-          </li>
-          <li>
-            <a href="../index.html#section-about">ABOUT US</a>
-          </li>
-          <li>
-            <a href="../index.html#section-gallery">GALLERY</a>
-          </li>
-          <li>
-            <a href="../index.html#section-news">NEWS</a>
-          </li>
-          <li>
-            <a href="contact.html">CONTACT</a>
-          </li>
+          <li><a href="#">FACEBOOK</a></li>
+          <li><a href="#">TWITTER</a></li>
+          <li><a href="#">INSTAGRAM</a></li>
+          <li><a href="#">WHATSAPP</a></li>
         </ul>
       </nav>
     </header>
@@ -56,11 +66,13 @@
       </div>
     </main>
     <footer class="flex-container">
-      <nav class="flex-container">
-        <a class="social-link-f" href="#">FACEBOOK</a>
-        <a class="social-link-t" href="#">TWITTER</a>
-        <a class="social-link-i" href="#">INSTAGRAM</a>
-        <a class="social-link-w" href="#">WHATSAPP</a>
+      <nav class="social-nav">
+        <ul class="flex-container">
+          <li><a href="#">FACEBOOK</a></li>
+          <li><a href="#">TWITTER</a></li>
+          <li><a href="#">INSTAGRAM</a></li>
+          <li><a href="#">WHATSAPP</a></li>
+        </ul>
       </nav>
       <section class="section-legal">
         <p>© 2023 Legal disclaimer. Designed and developed by <a href="https://github.com/hydrae-soft" target="_blank">hydrae-soft</a>.</p>

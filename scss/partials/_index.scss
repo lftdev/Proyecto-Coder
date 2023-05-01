@@ -1,0 +1,66 @@
+#main-home,
+#main-news {
+  color: white;
+  height: 100vh;
+}
+#main-home {
+  background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
+  /* SIGNUP MODAL */
+  .div-modal {
+      position: absolute;
+      top: 25vh;
+      width: 100%;
+      background-color: $color3;
+      padding: 50px;
+      max-width: 500px;
+      box-shadow: 0 0 0 100vmax $transparent-black;
+      z-index: 10;
+      .btn-close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-image: url(../assets/images/icons/close_FILL0_wght400_GRAD0_opsz48.svg);
+        background-color: transparent;
+        width: 48px;
+        height: 48px;
+        border:none;
+      }
+      .flex-container {
+        flex-direction: column;
+      }
+  }
+  /* /SIGNUP MODAL */
+}
+.carousel {
+  z-index: 0;
+  width: 100%;
+  max-width: 400px;
+}
+.carousel-item img {
+  object-fit: cover;
+  height: 300px;
+}
+.carousel-caption {
+  background-color: $transparent-black;
+  padding: 0 10px;
+  .btn-type2 {
+    padding: 0;
+    border: none;
+  }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  margin-top: 10%;
+}
+#section-news #art1 {
+  background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
+}
+#section-news #art2 {
+  background-image: url(../assets/images/news/football-gc553cff1b_1280.jpg);
+}
+#section-news #art3 {
+  background-image: url(../assets/images/news/football-stadium-3952062_1920.jpg);
+}
+#section-news #art4 {
+  background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
+}
