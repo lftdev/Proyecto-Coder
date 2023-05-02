@@ -38,17 +38,32 @@ a.btn-type1, a.btn-type2 {
   padding: 10px 20px;
 }
 
-button,
-input[type=submit] {
-  transition: all 0.3s;
-}
-
 img {
   max-width: 100%;
 }
 
-textarea {
+form.flex-container {
+  gap: 20px;
+}
+form .text-input {
+  background-color: #cccccc;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+}
+form .text-input:focus {
+  background-color: white;
+}
+form textarea {
   resize: none;
+  height: 300px;
+}
+
+button,
+input[type=submit] {
+  transition: all 0.3s;
 }
 
 .flex-container {
@@ -123,7 +138,7 @@ form.flex-container {
 .div-section-head {
   text-align: center;
 }
-.div-section-head p {
+.div-section-head h6, .div-section-head p {
   font-style: italic;
 }
 
@@ -226,6 +241,12 @@ header.not-mutable a:hover, header.sw-color-on-scroll a:hover {
 
 /* /HEADER */
 /* FOOTER */
+footer {
+  text-align: center;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 20px;
+}
 footer.send-bottom {
   position: absolute;
   bottom: 0;
@@ -233,10 +254,7 @@ footer.send-bottom {
 }
 footer.flex-container {
   flex-direction: column;
-  background-color: #2e2e2e;
   align-items: center;
-  color: white;
-  padding: 20px;
 }
 
 /* /FOOTER */
@@ -253,13 +271,25 @@ footer.flex-container {
 }
 #main-home .div-modal {
   position: absolute;
-  top: 25vh;
   width: 100%;
   background-color: #2e2e2e;
   padding: 50px;
-  max-width: 500px;
+  max-width: 400px;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
   z-index: 10;
+}
+#main-home .div-modal .btn-switch-modal {
+  background-color: #2e2e2e;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#main-home .div-modal .btn-switch-modal.btn-active {
+  color: #fff275;
+  border-bottom: 2px solid #ff3c38;
+}
+#main-home .div-modal .btn-switch-modal:not(.btn-active) {
+  color: #cccccc;
 }
 #main-home .div-modal .btn-close-modal {
   position: absolute;

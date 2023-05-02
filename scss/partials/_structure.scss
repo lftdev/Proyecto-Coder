@@ -1,6 +1,7 @@
 $color1: #ff3c38;
 $color2: #fff275;
 $color3: #2e2e2e;
+$color4: #cccccc;
 $transparent-black: rgba(0, 0, 0, 0.6);
 /* GENERAL */
 html,
@@ -39,15 +40,32 @@ a {
     padding: 10px 20px;
   }
 }
-button,
-input[type="submit"] {
-  transition: all 0.3s;
-}
 img {
   max-width: 100%;
 }
-textarea {
-  resize: none;
+form {
+  &.flex-container {
+    gap: 20px;
+  }
+  .text-input {
+    background-color: $color4;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    &:focus {
+      background-color: white;
+    }
+  }
+  textarea {
+    resize: none;
+    height: 300px;
+  }
+}
+button,
+input[type="submit"] {
+  transition: all 0.3s;
 }
 .flex-container {
   display: flex;
@@ -116,7 +134,7 @@ form.flex-container {
 }
 .div-section-head {
   text-align: center;
-  p {
+  h6, p {
     font-style: italic;
   }
 }
@@ -221,6 +239,10 @@ header {
 /* /HEADER */
 /* FOOTER */
 footer {
+  text-align: center;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 20px;
   &.send-bottom {
     position: absolute;
     bottom: 0;
@@ -228,10 +250,7 @@ footer {
   }
   &.flex-container {
     flex-direction: column;
-    background-color: #2e2e2e;
     align-items: center;
-    color: white;
-    padding: 20px;
   }
 }
 /* /FOOTER */

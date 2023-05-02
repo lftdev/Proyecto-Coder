@@ -8,13 +8,25 @@
   /* SIGNUP MODAL */
   .div-modal {
       position: absolute;
-      top: 25vh;
       width: 100%;
       background-color: $color3;
       padding: 50px;
-      max-width: 500px;
+      max-width: 400px;
       box-shadow: 0 0 0 100vmax $transparent-black;
       z-index: 10;
+      .btn-switch-modal {
+        background-color: $color3;
+        border: none;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        &.btn-active {
+          color: $color2;
+          border-bottom: 2px solid $color1;
+        }
+        &:not(.btn-active) {
+          color: $color4;
+        }
+      }
       .btn-close-modal {
         position: absolute;
         top: 10px;
