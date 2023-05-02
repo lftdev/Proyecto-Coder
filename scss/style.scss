@@ -4,10 +4,8 @@
 @import "./partials/about";
 @import "./partials/gallery";
 @import "./partials/news";
+@import "./partials/contact";
 /* SCRIPTS */
-.on-modal-show {
-  overflow: hidden;
-}
 .sw-color-on-scroll #btn-menu {
   span {
     background-color: $color1;

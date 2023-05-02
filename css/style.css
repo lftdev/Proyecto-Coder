@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 /* GENERAL */
-html,
-body {
+html {
   height: 100%;
+}
+html.on-modal-show {
+  overflow: hidden;
+}
+
+main.flex-container {
+  flex-direction: column;
 }
 
 body {
+  height: 100%;
   font-family: "Ubuntu", sans-serif;
+}
+body section {
+  margin: 20px 0;
+}
+body section.flex-container {
+  flex-direction: column;
 }
 body section .btn-type1 {
   margin: 20px 0;
@@ -17,11 +30,17 @@ li {
 }
 
 hr {
-  width: 25vh;
   height: 4px;
   border: none;
   opacity: 1;
+}
+hr.hr-type1 {
   background-color: #ff3c38;
+  width: 15%;
+}
+hr.hr-type2 {
+  background-color: white;
+  width: 50%;
 }
 
 a {
@@ -43,10 +62,11 @@ img {
 }
 
 form.flex-container {
+  flex-direction: column;
   gap: 20px;
 }
 form .text-input {
-  background-color: #cccccc;
+  background-color: #aaaaaa;
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -54,7 +74,7 @@ form .text-input {
   width: 100%;
 }
 form .text-input:focus {
-  background-color: white;
+  background-color: #dddddd;
 }
 form textarea {
   resize: none;
@@ -127,12 +147,6 @@ input[type=submit] {
 }
 .social-nav ul.flex-container {
   gap: 10px;
-}
-
-main.flex-container,
-section.flex-container,
-form.flex-container {
-  flex-direction: column;
 }
 
 .div-section-head {
@@ -289,7 +303,7 @@ footer.flex-container {
   border-bottom: 2px solid #ff3c38;
 }
 #main-home .div-modal .btn-switch-modal:not(.btn-active) {
-  color: #cccccc;
+  color: #aaaaaa;
 }
 #main-home .div-modal .btn-close-modal {
   position: absolute;
@@ -483,11 +497,23 @@ main.not-mutable {
   z-index: 1;
 }
 
-/* SCRIPTS */
-.on-modal-show {
-  overflow: hidden;
+#section-contact-alternatives .div-section-content div:nth-of-type(odd) {
+  background-color: #ff3c38;
+  color: white;
+  padding: 20px;
+}
+#section-contact-alternatives .div-section-content div:nth-of-type(odd).flex-container {
+  flex-direction: column;
+}
+#section-contact-alternatives .div-section-content div:nth-of-type(odd) a {
+  color: #fff275;
+}
+#section-contact-alternatives .div-section-content div:nth-of-type(odd) .bi {
+  width: 1.5em;
+  height: 1.5em;
 }
 
+/* SCRIPTS */
 .sw-color-on-scroll #btn-menu span {
   background-color: #ff3c38;
 }

@@ -1,16 +1,26 @@
 $color1: #ff3c38;
 $color2: #fff275;
 $color3: #2e2e2e;
-$color4: #cccccc;
+$color4: #aaaaaa;
 $transparent-black: rgba(0, 0, 0, 0.6);
 /* GENERAL */
-html,
-body {
+html {
   height: 100%;
+  &.on-modal-show {
+    overflow: hidden;
+  }  
+}
+main.flex-container {
+  flex-direction: column;
 }
 body {
+  height: 100%;
   font-family: "Ubuntu", sans-serif;
   section {
+    margin: 20px 0;
+    &.flex-container {
+      flex-direction: column;
+    }
     .btn-type1 {
       margin: 20px 0;
     }
@@ -20,11 +30,17 @@ li {
   list-style: none;
 }
 hr {
-  width: 25vh;
   height: 4px;
   border: none;
   opacity: 1;
-  background-color: $color1;
+  &.hr-type1 {
+    background-color: $color1;
+    width: 15%;
+  }
+  &.hr-type2 {
+    background-color: white;
+    width: 50%;
+  }
 }
 a {
   text-decoration: none;
@@ -45,6 +61,7 @@ img {
 }
 form {
   &.flex-container {
+    flex-direction: column;
     gap: 20px;
   }
   .text-input {
@@ -55,7 +72,7 @@ form {
     outline: none;
     width: 100%;
     &:focus {
-      background-color: white;
+      background-color: #dddddd;
     }
   }
   textarea {
@@ -126,11 +143,6 @@ input[type="submit"] {
   ul.flex-container {
     gap: 10px;
   }
-}
-main.flex-container,
-section.flex-container,
-form.flex-container {
-  flex-direction: column;
 }
 .div-section-head {
   text-align: center;
