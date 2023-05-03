@@ -64,15 +64,15 @@
 .carousel-control-next {
   margin-top: 10%;
 }
-#section-news #art1 {
+#section-news .art-c1 {
+  background-image: url(../../assets/images/news/training-828741_1920.jpg);
+}
+#section-news .art-c2 {
   background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
 }
-#section-news #art2 {
+#section-news .art-c3 {
   background-image: url(../assets/images/news/football-gc553cff1b_1280.jpg);
 }
-#section-news #art3 {
+#section-news .art-c4 {
   background-image: url(../assets/images/news/football-stadium-3952062_1920.jpg);
-}
-#section-news #art4 {
-  background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
 }

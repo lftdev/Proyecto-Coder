@@ -197,11 +197,11 @@ header {
   }
   &.deployed {
     height: 60%;
-    background-color: black;
+    background-color: $transparent-black;
   }
   &.not-mutable,
   &.sw-color-on-scroll {
-    background: black;
+    background: $transparent-black;
   }
   &.not-mutable a,
   &.sw-color-on-scroll a {

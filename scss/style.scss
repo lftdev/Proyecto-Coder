@@ -65,6 +65,9 @@
           padding: 20px;
         }
       }
+      &.set-closed {
+        display: block;
+      }
     }
     nav.social-nav {
       position: relative;

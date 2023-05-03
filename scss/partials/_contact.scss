@@ -3,6 +3,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
     div {
+        max-width: 370px;
         color: white;
         padding: 20px;
         &:nth-of-type(odd) {

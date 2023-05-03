@@ -1,50 +1,52 @@
 #main-news {
-    background: url(../assets/images/news/training-828741_1920.jpg) no-repeat center center fixed;
-    height: 100vh;
-  }
-  #news-page-section-grid .div-section-content {
+  background: url(../assets/images/news/training-828741_1920.jpg) no-repeat center center fixed;
+  height: 100vh;
+}
+#news-page-section-grid {
+  .div-section-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
   }
-  .article-card.flex-container {
-    background: center center no-repeat;
-    background-size: cover;
-    min-height: 250px;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  #news-page-section-grid #art1 {
+  .art-c1 {
     background-image: url(../assets/images/news/tartan-track-gf34e7127e_1280.jpg);
   }
-  #news-page-section-grid #art2 {
+  .art-c2 {
     background-image: url(../assets/images/news/football-gc553cff1b_1280.jpg);
   }
-  #news-page-section-grid #art3 {
+  .art-c3 {
     background-image: url(../assets/images/news/football-stadium-3952062_1920.jpg);
   }
-  #news-page-section-grid #art4 {
+  .art-c4 {
     background: url(../assets/images/news/box-ga466dadfe_1280.jpg) right center;
   }
-  #news-page-section-grid #art5 {
+  .art-c5 {
     background: url(../assets/images/news/stadium-gd6ea72586_1280.jpg);
   }
-  #news-page-section-grid #art6 {
+  .art-c6 {
     background: url(../assets/images/news/basketball-g749eb4114_1280.jpg) right center;
   }
-  .article-caption {
-    background-color: $transparent-black;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    position: relative;
-  }
-  .article-caption a span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
+}
+.article-card.flex-container {
+  background: center center no-repeat;
+  background-size: cover;
+  min-height: 250px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.article-caption {
+  background-color: $transparent-black;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+}
+.article-caption a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
