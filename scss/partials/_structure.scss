@@ -2,7 +2,8 @@ $color1: #ff3c38;
 $color2: #fff275;
 $color3: #2e2e2e;
 $color4: #aaaaaa;
-$transparent-black: rgba(0, 0, 0, 0.6);
+$color5: #dddddd;
+$transparent-black: rgba(0, 0, 0, .6);
 /* GENERAL */
 html {
   height: 100%;
@@ -72,7 +73,7 @@ form {
     outline: none;
     width: 100%;
     &:focus {
-      background-color: #dddddd;
+      background-color: $color5;
     }
   }
   textarea {

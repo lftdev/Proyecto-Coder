@@ -45,6 +45,9 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+  #section-contact-alternatives .div-section-content {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 900px) {
   header {
@@ -90,5 +93,8 @@
   }
   #news-page-section-grid .div-section-content {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #section-contact-alternatives .div-section-content {
+    grid-template-areas: "div div div";
   }
 }

@@ -1,13 +1,21 @@
 #section-contact-alternatives .div-section-content {
-    div:nth-of-type(odd) {
-        background-color: $color1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    div {
         color: white;
         padding: 20px;
+        &:nth-of-type(odd) {
+            background-color: $color1;
+            a {
+                color: $color2;
+            }
+        }
+        &:nth-of-type(even) {
+            background-color: $color3;
+        }
         &.flex-container {
             flex-direction: column;
-        }
-        a {
-            color: $color2;
         }
         .bi {
             width: 1.5em;
