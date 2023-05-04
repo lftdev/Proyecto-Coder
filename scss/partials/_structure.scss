@@ -1,9 +1,3 @@
-$color1: #ff3c38;
-$color2: #fff275;
-$color3: #2e2e2e;
-$color4: #aaaaaa;
-$color5: #dddddd;
-$transparent-black: rgba(0, 0, 0, .6);
 /* GENERAL */
 html {
   height: 100%;
@@ -101,10 +95,9 @@ input[type="submit"] {
   border-radius: 15px;
 }
 .btn-type1 {
-  background-color: $color1;
+  @include set-colors($color1, white);
   border: 2px solid $color1;
   border-radius: 15px;
-  color: white;
   padding: 10px 20px;
   &:hover {
     border-color: $color3;
@@ -113,10 +106,9 @@ input[type="submit"] {
   }
 }
 .btn-type2 {
-  background-color: transparent;
+  @include set-colors(transparent, $color2);
   border: 2px solid $color2;
   border-radius: 15px;
-  color: $color2;
   padding: 10px 20px;
   &:hover {
     border-color: $color3;
@@ -155,6 +147,16 @@ input[type="submit"] {
   text-align: justify;
 }
 /* /GENERAL */
+/* SCRIPTS */
+.sw-color-on-scroll #btn-menu {
+  span {
+    background-color: $color1;
+  }
+  &:hover span {
+    background-color: $color2;
+  }
+}
+/* /SCRIPTS */
 /* HEADER */
 header {
   position: fixed;
@@ -213,17 +215,15 @@ header {
   }
 }
 #btn-menu {
-  position: absolute;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
   background-color: transparent;
   border: none;
+  position: absolute;
+  right: 20px;
+  @include set-size(40px, 40px);
+  cursor: pointer;
   span {
     display: block;
-    width: 100%;
-    height: 2px;
+    @include set-size(100%, 2px);
     background-color: white;
     margin-top: 6px;
     transform-origin: left;
@@ -246,15 +246,14 @@ header {
     }
   }
   &:hover span {
-    background-color: $color1;
+    background-color: $color1
   }
 }
 /* /HEADER */
 /* FOOTER */
 footer {
   text-align: center;
-  background-color: #2e2e2e;
-  color: white;
+  @include set-colors(#2e2e2e, white);
   padding: 20px;
   &.send-bottom {
     position: absolute;

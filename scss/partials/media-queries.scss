@@ -1,0 +1,86 @@
+@media (min-width: 700px) {
+  header.deployed {
+    height: 100%;
+    overflow: scroll;
+  }
+  #section-news .container {
+    min-height: 500px;
+  }
+  #news-page-section-grid .div-section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  main.not-mutable {
+    margin-top: 100px;
+  }
+  #main-gallery .div-section-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "p1 p1 p2"
+      "p3 p4 p7"
+      "p9 p9 p6"
+      "p5 p5 p8";
+    div {
+      background-size: cover;
+      height: 500px;
+    }
+  }
+  #main-about section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  #section-contact-alternatives .div-section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  header {
+    &.flex-container {
+      flex-direction: row;
+    }
+    #nav-menu-header {
+      ul.flex-container {
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        a {
+          display: block;
+          padding: 20px;
+        }
+      }
+      &.set-closed {
+        display: block;
+      }
+    }
+    nav.social-nav {
+      position: relative;
+      &.set-closed {
+        display: block;
+      }
+      ul.flex-container {
+        flex-direction: row;
+      }
+    }
+  }
+  #main-home {
+    background: url(../assets/images/cover/football-1274661_1920.jpg) no-repeat center center fixed;
+  }
+  .carousel {
+    max-width: 900px;
+  }
+  .carousel-item img {
+    height: auto;
+  }
+  .hide-on-screen-lg {
+    display: none;
+  }
+  .hide-on-screen-sm {
+    display: block;
+  }
+  #news-page-section-grid .div-section-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #section-contact-alternatives .div-section-content {
+    grid-template-areas: "div div div";
+  }
+}

@@ -19,8 +19,7 @@
             flex-direction: column;
         }
         .bi {
-            width: 1.5em;
-            height: 1.5em;
+            @include set-size(1.5em, 1.5em);
         }
     }
 }
