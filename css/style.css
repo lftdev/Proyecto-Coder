@@ -471,12 +471,18 @@ main.not-mutable {
   background: url(../assets/images/news/basketball-g749eb4114_1280.jpg) right center;
 }
 
-.article-card.flex-container {
+.article-card {
   background: center center no-repeat;
   background-size: cover;
   min-height: 250px;
+}
+.article-card.flex-container {
   flex-direction: column;
   justify-content: flex-end;
+}
+.article-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
 }
 
 .article-caption {
