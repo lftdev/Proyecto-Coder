@@ -91,8 +91,7 @@ input[type=submit] {
   align-items: center;
 }
 
-.set-closed,
-.hide-on-screen-sm {
+.set-closed {
   display: none;
 }
 
@@ -148,6 +147,7 @@ input[type=submit] {
   gap: 10px;
 }
 
+/* GENERAL CLASSES */
 .div-section-head {
   text-align: center;
 }
@@ -159,6 +159,42 @@ input[type=submit] {
   text-align: justify;
 }
 
+.article-card {
+  background: center center no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.article-card.flex-container {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.article-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+.article-card .article-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  width: 90%;
+  height: 50%;
+}
+.article-card .article-caption a {
+  position: absolute;
+  bottom: 5px;
+}
+.article-card .article-caption a span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* /GENERAL CLASSES */
 /* /GENERAL */
 /* SCRIPTS */
 .sw-color-on-scroll #btn-menu span {
@@ -210,8 +246,9 @@ header nav.social-nav {
   bottom: 0;
 }
 header.deployed {
-  height: 60%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
 }
 header.not-mutable, header.sw-color-on-scroll {
   background: rgba(0, 0, 0, 0.8);
@@ -224,18 +261,18 @@ header.not-mutable a:hover, header.sw-color-on-scroll a:hover {
 }
 
 #btn-menu {
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   border: none;
   position: absolute;
   right: 20px;
-  width: 40px;
-  height: 40px;
   cursor: pointer;
 }
 #btn-menu span {
-  display: block;
   width: 100%;
   height: 2px;
+  display: block;
   background-color: white;
   margin-top: 6px;
   transform-origin: left;
@@ -264,9 +301,9 @@ header.not-mutable a:hover, header.sw-color-on-scroll a:hover {
 /* /HEADER */
 /* FOOTER */
 footer {
-  text-align: center;
   background-color: #2e2e2e;
   color: white;
+  text-align: center;
   padding: 20px;
 }
 footer.send-bottom {
@@ -291,6 +328,11 @@ footer.flex-container {
   /* SIGNUP MODAL */
   /* /SIGNUP MODAL */
 }
+#main-home .div-section-head {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin-bottom: 10px;
+}
 #main-home .div-modal {
   position: absolute;
   width: 100%;
@@ -299,19 +341,6 @@ footer.flex-container {
   max-width: 400px;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
   z-index: 10;
-}
-#main-home .div-modal .btn-switch-modal {
-  background-color: #2e2e2e;
-  border: none;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-#main-home .div-modal .btn-switch-modal.btn-active {
-  color: #fff275;
-  border-bottom: 2px solid #ff3c38;
-}
-#main-home .div-modal .btn-switch-modal:not(.btn-active) {
-  color: #aaaaaa;
 }
 #main-home .div-modal .btn-close-modal {
   position: absolute;
@@ -349,7 +378,7 @@ footer.flex-container {
 
 .carousel-control-prev,
 .carousel-control-next {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #section-news .art-c1 {
@@ -471,37 +500,6 @@ main.not-mutable {
   background: url(../assets/images/news/basketball-g749eb4114_1280.jpg) right center;
 }
 
-.article-card {
-  background: center center no-repeat;
-  background-size: cover;
-  min-height: 250px;
-}
-.article-card.flex-container {
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.article-card:hover {
-  transform: scale(1.05);
-  transition: all 0.3s;
-}
-
-.article-caption {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  margin: 10px;
-  padding: 10px;
-  position: relative;
-}
-
-.article-caption a span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
 #section-contact-alternatives .div-section-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -530,10 +528,6 @@ main.not-mutable {
 }
 
 @media (min-width: 700px) {
-  header.deployed {
-    height: 100%;
-    overflow: scroll;
-  }
   #section-news .container {
     min-height: 500px;
   }
@@ -559,7 +553,7 @@ main.not-mutable {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   header.flex-container {
     flex-direction: row;
   }
@@ -575,6 +569,11 @@ main.not-mutable {
   }
   header #nav-menu-header.set-closed {
     display: block;
+  }
+  header.deployed {
+    height: initial;
+    background-color: initial;
+    overflow: initial;
   }
   header nav.social-nav {
     position: relative;
@@ -596,9 +595,6 @@ main.not-mutable {
   }
   .hide-on-screen-lg {
     display: none;
-  }
-  .hide-on-screen-sm {
-    display: block;
   }
   #news-page-section-grid .div-section-content {
     grid-template-columns: 1fr 1fr 1fr;

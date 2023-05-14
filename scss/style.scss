@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 $color1: #ff3c38;
 $color2: #fff275;
 $color3: #2e2e2e;
@@ -13,10 +13,10 @@ $transparent-black: rgba(0, 0, 0, .8);
   background-color: $background;
   color: $foreground;
 }
-@import "./partials/structure";
-@import "./partials/index";
-@import "./partials/about";
-@import "./partials/gallery";
-@import "./partials/news";
-@import "./partials/contact";
-@import "./partials/media-queries.scss";
+@import './partials/structure';
+@import './partials/index';
+@import './partials/about';
+@import './partials/gallery';
+@import './partials/news';
+@import './partials/contact';
+@import './partials/media-queries.scss';

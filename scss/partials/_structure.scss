@@ -10,7 +10,7 @@ main.flex-container {
 }
 body {
   height: 100%;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   section {
     margin: 20px 0;
     &.flex-container {
@@ -76,7 +76,7 @@ form {
   }
 }
 button,
-input[type="submit"] {
+input[type='submit'] {
   transition: all 0.3s;
 }
 .flex-container {
@@ -84,8 +84,7 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
 }
-.set-closed,
-.hide-on-screen-sm {
+.set-closed {
   display: none;
 }
 .hide-on-screen-lg {
@@ -137,6 +136,7 @@ input[type="submit"] {
     gap: 10px;
   }
 }
+/* GENERAL CLASSES */
 .div-section-head {
   text-align: center;
   h6, p {
@@ -146,6 +146,39 @@ input[type="submit"] {
 .div-section-content p {
   text-align: justify;
 }
+.article-card {
+  background: center center no-repeat;
+  background-size: cover;
+  height: 400px;
+  &.flex-container {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &:hover {
+    transform: scale(1.05);
+    transition: all .3s;
+  }
+  .article-caption {
+    @include set-colors($transparent-black, white);
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    width: 90%;
+    height: 50%;
+    a {
+      position: absolute;
+      bottom: 5px;
+      span {
+        @include set-size(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+/* /GENERAL CLASSES */
 /* /GENERAL */
 /* SCRIPTS */
 .sw-color-on-scroll #btn-menu {
@@ -198,8 +231,9 @@ header {
     bottom: 0;
   }
   &.deployed {
-    height: 60%;
+    height: 100vh;
     background-color: $transparent-black;
+    overflow: scroll;
   }
   &.not-mutable,
   &.sw-color-on-scroll {
@@ -215,15 +249,15 @@ header {
   }
 }
 #btn-menu {
+  @include set-size(40px, 40px);
   background-color: transparent;
   border: none;
   position: absolute;
   right: 20px;
-  @include set-size(40px, 40px);
   cursor: pointer;
   span {
-    display: block;
     @include set-size(100%, 2px);
+    display: block;
     background-color: white;
     margin-top: 6px;
     transform-origin: left;
@@ -252,8 +286,8 @@ header {
 /* /HEADER */
 /* FOOTER */
 footer {
-  text-align: center;
   @include set-colors(#2e2e2e, white);
+  text-align: center;
   padding: 20px;
   &.send-bottom {
     position: absolute;

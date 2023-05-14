@@ -5,6 +5,11 @@
 }
 #main-home {
   background: url(../assets/images/cover/basketball-6763978_1920.jpg) no-repeat center center fixed;
+  .div-section-head {
+    background: $transparent-black;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
   /* SIGNUP MODAL */
   .div-modal {
       position: absolute;
@@ -48,7 +53,7 @@
 }
 .carousel-control-prev,
 .carousel-control-next {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 #section-news {
   .art-c1 {
