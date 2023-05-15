@@ -1,8 +1,15 @@
 const header = document.querySelector('header')
 const nav_menu_header = document.querySelector('#nav-menu-header')
 const header_social_nav = document.querySelector('header .social-nav')
+
+const btn_menu = document.querySelector('#btn-menu')
+btn_menu.addEventListener('click', on_click_menu)
+btn_menu.addEventListener('blur', () => {
+    setTimeout(on_click_menu, 300)
+})
+    
+
 const btn_menu_span = document.querySelectorAll('#btn-menu span')
-document.querySelector('#btn-menu').addEventListener('click', on_click_menu)
 
 const mutable_header = document.querySelector('header.mutable')
 window.addEventListener('scroll', () => {
