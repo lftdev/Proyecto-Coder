@@ -47,5 +47,5 @@ I think that I did a good work talking about HTML and CSS (more precisely in SAS
 Regarding to JavaScript, I am not sure if my code in this project is completely correct, but I have too much to learn of that too, even more than HTML and CSS.
 
 ## Author
-- Linkedin profile: [Lucas Franco Torres](https://www.linkedin.com/in/lucas-franco-torres-front-dev/)
-- GitHub profile: [hydrae-soft](https://github.com/hydrae-soft)
+- Linkedin profile: [Lucas Franco Torres](https://linkedin.com/in/frontdev-lucastorres)
+- GitHub profile: [lftdev](https://github.com/lftdev)
